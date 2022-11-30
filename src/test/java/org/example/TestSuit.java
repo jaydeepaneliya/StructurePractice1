@@ -57,7 +57,7 @@ public class TestSuit extends BaseTest {
 
 
     @Test
-    public void eMailAFriend(){
+    public void VerifyIfUserCaneMailAFriend(){
 
         //Click on MacBook Pro product
         homePage.clickOnMacBookPro();
@@ -68,7 +68,7 @@ public class TestSuit extends BaseTest {
     }
 
     @Test
-    public void categoriesList(){
+    public void verifyToPrintCategoriesList(){
         homePage.printProductCategoriesList();
     }
 
@@ -115,4 +115,18 @@ public class TestSuit extends BaseTest {
         homePage.ClickOnFacebookSymbolAndThenComeBackToMainTab();
     }
 
+    @Test
+    public void verifyUserShouldBeAbleToNavigateToDesktopByMouseHovering(){
+        homePage.navigateToDesktopByMouseHovering();
+    }
+
+    @Test
+    public void verifyIfTheColorChangesWhenHoveringTheMouse(){
+        homePage.noticeChangeOfTheColor();
+    }
+
+    @Test
+    public void VerifyIfTheSearchBoxWorksProperly(){
+        homePage.searchBoxWorkingProperly();
+    }
 }

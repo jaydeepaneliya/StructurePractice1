@@ -15,7 +15,7 @@ public class ProductEmailAFriend extends Utils {
 //        System.out.println(errormsg);//printing error texts from the website
         String expectedMessage = "Your registration completed";
         String actualMessage = driver.findElement(By.xpath("//div[@class=\"message-error validation-summary-errors\"]//li")).getText();
-        Assert.assertEquals(actualMessage, expectedMessage, "Regitration message does not match");
+        Assert.assertEquals(actualMessage, expectedMessage, "Registration message does not match");
     }
 
 }

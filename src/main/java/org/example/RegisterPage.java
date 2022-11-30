@@ -1,16 +1,16 @@
 package org.example;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.support.ui.Select;
 
 public class RegisterPage extends Utils {
     public void verifyUserOnRegisterPage()
     {
         // driver.findElement(By.className("ico-register")).click(); //command to click on register button
         //driver.findElement(By.id("FirstName")).sendKeys("Jaydeep"); //Command to type first name
-        typeText(By.id("FirstName"),"Jaydeep");
+        typeText(By.id("FirstName"),LoadProperty.getProperty("firstName"));
+//        typeText(By.id("FirstName"),"Jaydeep");
         //driver.findElement(By.id("LastName")).sendKeys("Paneliya"); //Command to type last name
-        typeText(By.id("LastName"),"Paneliya");
+        typeText(By.id("LastName"),LoadProperty.getProperty("lastName"));
 
 //        Select selectDate = new Select(driver.findElement(By.name("DateOfBirthDay")));
 //        selectDate.selectByIndex(1);

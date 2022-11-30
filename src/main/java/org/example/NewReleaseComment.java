@@ -12,8 +12,8 @@ public class NewReleaseComment extends Utils{
 
     public void commentOnNewRelease(){
         String timestamp = new SimpleDateFormat("ddHHmmss").format(new java.util.Date()); //Stored object in string
-        driver.findElement(By.className("enter-comment-title")).sendKeys("Satisfied");//Command to type title
-        driver.findElement(By.className("enter-comment-text")).sendKeys("Your news seems accurate always."); //Command to type the comment
+        driver.findElement(By.className("enter-comment-title")).sendKeys("It seems good");//Command to type title
+        driver.findElement(By.className("enter-comment-text")).sendKeys("It seems good"); //Command to type the comment
         driver.findElement(By.xpath("//button[@class=\"button-1 news-item-add-comment-button\"]")).click();//Command to click on the 'new comment' button
 //        String message = driver.findElement(By.className("result")).getText();//Created variable to print the text from the website
 //        System.out.println(message);//print out the message
@@ -27,15 +27,17 @@ public class NewReleaseComment extends Utils{
     }
 
     public void verifyCommentAddedAtLast(){
-        String title = driver.findElement(By.xpath("//strong[@class=\"comment-text\"]")).getText();
+//        String title = driver.findElement(By.xpath("//strong[@class=\"comment-text\"]")).getText();
+        String title = "It seems good";
         List<WebElement> comments = driver.findElements(By.xpath("//div[@class=\"comment-title\"]"));
         List<String> listOfComments = new ArrayList<>();
         for (WebElement a : comments ){
             listOfComments.add(a.getText());
         }
-        Assert.assertTrue(listOfComments.contains(title));
+//        Assert.assertTrue(listOfComments.contains(title));
         String lastComment = listOfComments.get(listOfComments.size()-1);
-        System.out.println(lastComment);
-        Assert.assertEquals(lastComment,title, "Comments are not listed in correct order.");
+//        System.out.println(lastComment);
+        Assert.assertEquals(lastComment, title, "Comment is not at the bottom");
+//        Assert.assertEquals(lastComment,title, "Comments are not listed in correct order.");
     }
 }

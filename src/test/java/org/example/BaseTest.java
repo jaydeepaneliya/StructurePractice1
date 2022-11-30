@@ -17,7 +17,7 @@ public class BaseTest extends Utils {
         if (!result.isSuccess()){
             captureScreenShot();
         }
-        driverManager.closeBrowser();
+//        driverManager.closeBrowser();
     }
 
 

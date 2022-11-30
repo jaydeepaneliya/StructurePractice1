@@ -8,7 +8,6 @@ public class Computers extends Utils {
 
     public void clickOnDesktop() {
         clickOnElement(_desktop);
-        //clickOnElement(By.xpath("//div/h2/a[@href=\"/desktops\"]"));
     }
 
 }
