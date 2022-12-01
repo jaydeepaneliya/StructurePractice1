@@ -172,19 +172,11 @@ public class HomePage extends Utils {
         seriesOfActions.perform();
         clickOnElement(By.xpath("//button[@type=\"submit\"]"));
 
-//        WebElement searchedItemsList = driver.findElement(By.xpath("//h2"));
-
-//        String expectedItemsListName = driver.findElement(By.xpath("//h2"));
-
-//        String actualMessage = driver.findElement(By.xpath("//h2[contains(text(),'€1032.00')]")).getText();
-//        Assert.assertTrue(actualMessage.contains("Euro"),"Currency selected is not Euro.");
-
-//        String actualItemNames = driver.findElement(By.xpath("//h2"))
+        WebElement listOfSearchedProducts = driver.findElement(By.xpath("//h2"));
 
 
 
-//        searchField.sendKeys("Nike");
-//        clickOnElement(By.xpath("//button[@type=\"submit\"]"));
+
 
 
     }
